@@ -2,7 +2,7 @@
   <img src="./images/banner.png" alt="AI 智能体教程" width="950px">
   <h1 style="margin-top: 15px;">🚀 全网最系统的 AI 智能体实战速成指南（从零到企业级落地）</h1>
   <h4><b>ai-agents-from-zero</b></h4>
-  <p><em>2026 持续更新中 · 目标打造<b>「全网最完整」</b>AI Agent 教程 —— <b>系统教程 + 可跑源码 + 面试题库</b>，全面对齐「AI 智能体 / 大模型应用开发工程师」<b>培训课表</b>与<b>招聘 JD</b>的一条龙学习路线</em></p>
+  <p><em>2026 持续更新中 · 目标打造<b>「全网最完整」</b>AI Agent 教程 —— <b>系统教程 + 可跑源码 + 面试题库 + 企业级实战项目</b>，全面对齐「AI 智能体 / 大模型应用开发工程师」<b>培训课表</b>与<b>招聘 JD</b>的一条龙学习路线</em></p>
 </div>
 
 <div align="center">
