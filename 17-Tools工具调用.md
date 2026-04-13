@@ -10,6 +10,8 @@
 
 **学习建议：** 本章建议按 **“Tool 定义 → 为什么需要 Tool → 工具调用怎么工作 → 怎么自己定义 Tool → 为什么要配合 Pydantic → 怎么把 Tool 跑成一个完整业务闭环”** 的顺序学习。不要一上来就死记 API 名称，先把“模型到底做什么、程序到底做什么”分清楚，后面的 `@tool`、`bind_tools`、`tool_calls`、`ToolMessage` 才会自然串起来。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - 工具调用、MCP与智能体](工具导航与参考资料索引.md#工具调用、MCP与智能体)。
+
 ---
 
 ## 1、Tools 简介
@@ -34,12 +36,6 @@
 **一句话定义：** Tool 是外部能力本身，Tool Calling 是模型发起使用这项能力的过程。
 
 > **术语约定：** 为了减少后续章节的切换成本，本教程后文默认把这层机制统称为 **Tool Calling**；如果引用 OpenAI 或其他平台文档时出现 **Function Calling**，你可以把它理解成同一层问题的不同叫法。
-
-**官方文档与资源：**
-
-- LangChain 工具文档：https://docs.langchain.com/oss/python/langchain/tools
-- LangChain 内置工具列表：https://docs.langchain.com/oss/python/integrations/tools
-- Spring AI 工具：https://docs.spring.io/spring-ai/reference/api/tools.html
 
 ### 1.2 为什么需要 Tools
 

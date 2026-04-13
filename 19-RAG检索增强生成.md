@@ -10,6 +10,8 @@
 
 **学习建议：** 本章建议按 **“RAG 是什么 → 为什么需要 → 索引与检索两阶段 → 文档加载 → 文本切分 → 综合案例”** 的顺序学习。不要一上来就死记某个 API，先理解 RAG 的整体数据流，再看每个组件各自负责哪一步，代码会更容易看懂。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - RAG与向量检索](工具导航与参考资料索引.md#RAG与向量检索)。
+
 ---
 
 ## 1、RAG 简介
@@ -28,13 +30,6 @@
 - 检索结果最终怎么进入 Prompt 或消息上下文
 
 所以你可以把本章理解成：**把第 2 章里的知识库问答体验，翻译成 LangChain 里的数据结构与组件流水线。**
-
-**官方文档与资源：**
-
-- 原始论文（arXiv）：https://arxiv.org/abs/2005.11401
-- LangChain Retrieval 总览：https://docs.langchain.com/oss/python/langchain/retrieval
-- LangChain RAG 教程：https://docs.langchain.com/oss/python/langchain/rag
-- LangSmith RAG 观测与调试教程：https://docs.langchain.com/langsmith/observability-llm-tutorial
 
 ### 1.2 为什么需要 RAG
 

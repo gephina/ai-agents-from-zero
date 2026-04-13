@@ -14,13 +14,6 @@
 
 **学习建议：** 先通读第 1 节把握「四阶段：环境准备 → 获取代码 → 配置模型 → 启动服务」；第 2 节按顺序做（Docker → 下载 Studio → 二选一配置模型 → 启动）。模型配置是核心：选火山方舟则需在火山引擎创建 API Key 和 Endpoint；选 Ollama 则需先装 Ollama 并拉取模型。Coze Loop 为进阶，可先只部署 Studio 跑通再学 Loop。
 
-**官方文档与资源：**
-
-- Coze Studio：https://github.com/coze-dev/coze-studio
-- Coze Loop：https://github.com/coze-dev/coze-loop
-- Docker Desktop for Windows：https://docs.docker.com/desktop/setup/install/windows-install/
-- Ollama：https://ollama.com/
-
 ---
 
 ## 1、整体概述

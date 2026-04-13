@@ -11,6 +11,8 @@
 
 **学习建议：** 本章建议按 **“Graph 是什么 → 怎么构建一张完整图 → State 为什么是核心 → State Schema 怎么定义 → 输入/输出 Schema 怎么收口 → Reducer 怎么决定状态合并”** 的顺序学习。不要一上来死记所有 Reducer 名字，先把“**节点只返回局部更新，State 负责承载数据，Reducer 负责决定这些更新怎么合并回状态**”这件事想清楚，后面的 `add_messages`、`operator.add`、自定义 Reducer 才会真正串起来。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - LangGraph](工具导航与参考资料索引.md#LangGraph)。
+
 ---
 
 ## 1、Graph API 之 Graph（图）
@@ -20,12 +22,6 @@
 在 LangGraph 的 **Graph API** 里，**Graph（图）** 可以先理解成：**由节点和有向边组成的一张可执行工作流结构图**。节点负责“这一站做什么”，边负责“这一站执行完后下一步往哪走”，`START` 和 `END` 分别表示图的入口和出口。
 
 这里的“图”不是只画给人看的流程图，而是**真的会被编译、运行、调度的程序结构**。当你把状态、节点和边定义好，再调用 `compile()`，LangGraph 会把这个图构建器编译成一个真正可运行的应用对象；之后就可以用 `invoke(...)`、`stream(...)` 等方式执行这张图。
-
-**官方文档与资源：**
-
-- **Graph API Overview**（英）：https://docs.langchain.com/oss/python/langgraph/graph-api | （中）：https://docs.langchain.org.cn/oss/python/langgraph/graph-api
-- **Use the Graph API**（英）：https://docs.langchain.com/oss/python/langgraph/use-graph-api | （中）：https://docs.langchain.org.cn/oss/python/langgraph/use-graph-api
-- **LangGraph Overview**（英）：https://docs.langchain.com/oss/python/langgraph/overview | （中）：https://docs.langchain.org.cn/oss/python/langgraph/overview
 
 ![有向图在工作流中的含义示意](images/23/23-1-1-1.jpeg)
 

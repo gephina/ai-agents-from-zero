@@ -10,6 +10,8 @@
 
 **学习建议：** 如果说 [第 10 章](10-LangChain快速上手与HelloWorld.md) 解决的是“先把模型调通”，那么本章开始解决的是“**把模型调用这件事系统化**”。建议按 **Model I/O 定义 → 模型分类 → 参数与返回值 → 模型接入方式** 的顺序学习，并和 [第 13 章 提示词与消息模板](13-提示词与消息模板.md)、[第 14 章 输出解析器](14-输出解析器.md) 连起来看。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - 模型接入与本地运行](工具导航与参考资料索引.md#模型接入与本地运行)。
+
 ---
 
 ## 1、Model I/O 简介
@@ -35,11 +37,6 @@
 - **Format** 主要会在 [第 13 章 提示词与消息模板](13-提示词与消息模板.md) 详细展开
 - **Predict** 是本章的重点
 - **Parse** 主要会在 [第 14 章 输出解析器](14-输出解析器.md) 详细展开
-
-**官方文档与资源：**
-
-- **Model I/O 总览**：https://docs.langchain.com/oss/python/langchain/models （英文）；https://docs.langchain.org.cn/oss/python/langchain/models （中文）
-- **聊天模型集成**：https://docs.langchain.com/oss/python/integrations/chat （英文）；https://docs.langchain.org.cn/oss/python/integrations/chat （中文）
 
 ### 1.2 为什么需要 Model I/O
 

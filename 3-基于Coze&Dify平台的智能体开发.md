@@ -20,6 +20,8 @@
 
 **学习建议：** 这一章最适合“先通读、再跟做”。第一次读，先把第 1 节和第 2～5 节的开头读明白，建立“平台智能体在项目里到底扮演什么角色”的大图；第二次读，再挑 1 个 Coze 案例和 1 个 Dify 案例亲手做一遍。平台学习不要求你一次把所有按钮都记住，更重要的是记住：**提示词定义行为，工具扩展动作，知识库补充资料，变量保存状态，工作流组织步骤。**
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - 低代码与智能体平台](工具导航与参考资料索引.md#低代码与智能体平台)。
+
 ---
 
 ## 1、先建立一张“平台智能体”地图
@@ -313,16 +315,6 @@ https://agent.xfyun.cn/home
 > **初学者常问：Coze 和 Dify 先学哪个？** 若你零代码、想最快做出能发布的智能体（如豆包/飞书一键发布），优先跟 **Coze**；若你有一点开发基础、更在意企业级功能或本地部署，可优先 **Dify**。两者思路一致（提示词 + 工具/插件 + 知识库），学完一个再学另一个会很快。
 
 ### 4.2 Coze(扣子)介绍
-
-扣子官网：https://www.coze.cn/
-
-开源与开发者入口：
-
-- Coze Studio: https://github.com/coze-dev/coze-studio
-- Coze Loop: https://github.com/coze-dev/coze-loop
-- Coze Python SDK: https://github.com/coze-dev/coze-py
-
-客户案例：https://www.coze.cn/customers
 
 ### 4.3 功能说明
 
@@ -643,13 +635,6 @@ https://agent.xfyun.cn/home
 ### 5.1 Dify 介绍
 
 Dify（DefineModify）是一个开源的大语言模型(LLM)应用开发平台，由`苏州语灵人工智能`推出。是当今最优雅、门槛最低、最受欢迎、效果最好的大模型开发平台之一。
-
-官网：https://dify.ai/zh
-
-官方文档：
-
-- Dify Docs：https://docs.dify.ai/
-- Self-host 文档：https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose
 
 Dify 为 AI Agent 提供了 50 多种内置工具，如谷歌搜索、DALL·E、Stable Diffusion 和 WolframAlpha 等。
 

@@ -10,6 +10,8 @@
 
 **学习建议：** 本章建议按 **“HelloWorld 是什么 → 环境与依赖 → 调用三件套 → 第一个案例 → 多模型共存 → 工程化写法”** 的顺序学习。不要一上来就记太多 API，先把第一次调用跑通，再理解它为什么这样写。需要说明的是：**LangChain 官方主线已经进入 1.x 时代**，因此本章以 **1.x 官方文档和当前项目依赖**为主，同时保留课程中仍然需要认识的 0.x / 经典写法，帮助你读懂旧资料与旧代码。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - LangChain](工具导航与参考资料索引.md#_LangChain)。
+
 ---
 
 ## 1、LangChain 环境与约定
@@ -334,12 +336,6 @@ https://dashscope.aliyuncs.com/compatible-mode/v1
 所以，多模型共存不是“进阶玩法”，而是非常现实的工程需求。
 
 ### 5.2 调用三件套
-
-文档：
-
-- **DeepSeek 使用说明**：https://platform.deepseek.com/usage
-- **DeepSeek API 文档**：https://api-docs.deepseek.com/zh-cn/
-- **LangChain DeepSeek Provider 文档**：https://docs.langchain.com/oss/python/integrations/providers/deepseek
 
 #### 5.2.1 获得 API Key
 

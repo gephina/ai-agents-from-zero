@@ -10,6 +10,8 @@
 
 **学习建议：** 本章建议按 **“先理解 LangGraph 的定义和定位 → 再理解为什么需要图 → 再看它和 LangChain / Agent 的边界 → 再记住四个核心概念 → 最后按三个案例逐步上手”** 的顺序学习。第 22 章只负责建立全局认知和最小动手能力；**Graph API 中图和状态的细节**放在 [第 23 章](23-LangGraphAPI：图与状态.md)，**节点、边和高级控制**放在 [第 24 章](24-LangGraphAPI：节点、边与进阶.md)，**持久化、流式、子图、时间旅行**放在 [第 25 章](25-LangGraph高级特性.md)，**多智能体与 A2A** 放在 [第 26 章](26-LangGraph多智能体与A2A.md)。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - LangGraph](工具导航与参考资料索引.md#LangGraph)。
+
 ---
 
 ## 1、LangGraph 简介
@@ -38,11 +40,6 @@
 | **生产级部署与可观测** | 想把图变成可运维、可追踪、可调试的线上应用               | 不只是本地 demo，而是更接近线上工作流运行时         |
 
 这一章先重点建立“**图 + 状态 + 最小运行方式**”的入门认知；上表里的持久化、流式、人机介入等能力，会在 [第 25 章](25-LangGraph高级特性.md) 继续展开。
-
-**官方文档与资源：**
-
-- 英文：https://docs.langchain.com/oss/python/langgraph/overview
-- 中文：https://docs.langchain.org.cn/oss/python/langgraph/overview
 
 ### 1.2 为什么需要 LangGraph
 

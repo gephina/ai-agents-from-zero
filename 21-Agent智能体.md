@@ -11,6 +11,8 @@
 
 **学习建议：** 本章建议按 **“Agent 是什么 → Agent 和 Tool 的边界 → Agent 如何工作 → LangChain 中的两条实现路线 → 实操案例 → 与 RAG / MCP / Function Calling 的关系”** 的顺序学习。不要一开始就死记 API，先把“**Agent 是决策层，不是工具本身**”这件事想清楚，后面的 ReAct、AgentExecutor、create_agent、A2A 才不会乱。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - 工具调用、MCP与智能体](工具导航与参考资料索引.md#工具调用、MCP与智能体)。
+
 ---
 
 ## 1、Agent 简介
@@ -37,14 +39,6 @@
 ![Agent 扩展架构示意：中心为 Agent，周邻 Memory（短/长期）、Planning（反思、自评、思维链）、Tools（日历、计算、搜索等）与 Action，强调多模块协同而非最小四元组一一对应（中文）](images/21/21-1-1-2.png)
 
 ![Agent 扩展架构示意：中心为 Agent，周邻 Memory（短/长期）、Planning（反思、自评、思维链）、Tools（日历、计算、搜索等）与 Action，强调多模块协同而非最小四元组一一对应（英文）](images/21/21-1-1-1.jpeg)
-
-**官方文档与资源：**
-
-- LangChain Agents：https://docs.langchain.com/oss/python/langchain/agents
-- LangChain Structured Output：https://docs.langchain.com/oss/python/langchain/structured-output
-- LangGraph Workflows and Agents：https://docs.langchain.com/oss/python/langgraph/workflows-agents
-- LangChain Multi-Agent / Subagents：https://docs.langchain.com/oss/python/langchain/multi-agent/subagents
-- ReAct 论文：https://arxiv.org/abs/2210.03629
 
 ### 1.2 Agent 最常见的工作方式：ReAct
 

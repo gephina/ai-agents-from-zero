@@ -10,6 +10,8 @@
 
 **学习建议：** 本章以“建立全局地图”为主，不要求你立刻记住所有 API。建议按 **定义与作用 → 定位 → 包与版本 → 核心模块 → 项目学习路径** 的顺序学习，把 LangChain 先看成一个“AI 应用编排层”。完成本章后，直接进入 [第 10 章 LangChain 快速上手与 HelloWorld](10-LangChain快速上手与HelloWorld.md)，会更容易把抽象概念和代码实践连起来。需要说明的是：**如今，LangChain 官方主线已经进入 1.x 时代**，本章会以官方 1.x 文档为主，同时兼顾课程里仍然会遇到的 0.x / 经典写法。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - LangChain](工具导航与参考资料索引.md#LangChain)。
+
 ---
 
 ## 1、LangChain 简介
@@ -41,15 +43,6 @@ LangChain 在 GitHub 上的热度变化如下图所示：
 - 日志、追踪、调试、评估
 
 这也是为什么它会被很多人看作 AI 应用开发里的“基础框架”。
-
-**官方文档与资源：**
-
-- **产品官网**：https://www.langchain.com/langchain
-- **官网（中文）**：https://docs.langchain.org.cn/oss/python/langchain/overview
-- **官网（英文）**：https://docs.langchain.com/oss/python/langchain/overview
-- **GitHub 组织**：https://github.com/langchain-ai
-- **GitHub 主仓库**：https://github.com/langchain-ai/langchain
-- **API 文档**：https://reference.langchain.com/python/langchain/
 
 ### 1.2 为什么需要 LangChain
 

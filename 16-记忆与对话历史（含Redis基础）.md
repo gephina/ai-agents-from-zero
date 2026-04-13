@@ -10,6 +10,8 @@
 
 **学习建议：** 本章建议按 **“为什么需要记忆 → 记忆到底是什么 → 无记忆时会怎样 → 记忆如何实现 → LangChain 里有哪些实现方式 → 先跑内存版，再跑 Redis 版”** 的顺序学习。不要一开始就纠结 Redis 命令，先把“为什么模型上一轮记不住、我们是怎么帮它记住的”搞明白，后面的代码会顺很多。
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - LangGraph](工具导航与参考资料索引.md#LangGraph)。
+
 ---
 
 ## 1、记忆简介
@@ -35,11 +37,6 @@
 - **多步任务承接**：让模型把前一步结果作为后一步输入，而不是每轮都重新从零开始。
 
 用一句最直白的话说：**没有记忆，聊天系统就只是“连续发了很多次单轮请求”；有了记忆，它才真正开始像“对话”。**
-
-**官方文档与资源：**
-
-- LangChain 短期记忆文档：https://docs.langchain.com/oss/python/langchain/short-term-memory
-- LangGraph 持久化 / Memory 主线：https://docs.langchain.com/oss/python/langgraph/add-memory
 
 ![LangChain 官方文档「Core components → Short-term memory」概述：记忆用于保存先前交互信息，支撑智能体在多轮交互中保持效率与体验](images/16/16-1-1-2.jpeg)
 

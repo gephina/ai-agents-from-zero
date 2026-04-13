@@ -11,6 +11,8 @@
 
 **学习建议：** 本章建议按 **“Node 是什么 → Edge 怎么控制流程 → 什么时候需要 Send / Command / Runtime”** 的顺序学习。不要一上来把 Send、Command 看成“额外语法点”，它们本质上都是在回答一个问题：**图在运行时，到底怎么更灵活地控制下一步。**
 
+**官方文档与资源**：详见 [工具导航与参考资料索引 - LangGraph](工具导航与参考资料索引.md#LangGraph)。
+
 ---
 
 ## 1、Graph API 之 Node（节点）
@@ -28,11 +30,6 @@
 - 一次对 State 的局部更新
 
 LangGraph 官方对 `StateGraph` 的定义里有一句非常核心的话：节点的签名可以理解为 `State -> Partial<State>`。也就是说，节点通常读取当前状态，然后只返回它想更新的那部分字段，而不是每次都把整份完整状态重新手写一遍。
-
-**官方文档与资源：**
-
-- **Graph API Overview**（英）：https://docs.langchain.com/oss/python/langgraph/graph-api | （中）：https://docs.langchain.org.cn/oss/python/langgraph/graph-api
-- **Use the Graph API**（英）：https://docs.langchain.com/oss/python/langgraph/use-graph-api | （中）：https://docs.langchain.org.cn/oss/python/langgraph/use-graph-api
 
 ### 1.2 为什么节点很重要
 

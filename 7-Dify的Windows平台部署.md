@@ -12,11 +12,7 @@
 
 **学习建议：** 先完成第 1 节 Docker 安装并重启（必要时安装 WSL），再用第 2 节：获取 Dify → 进入 docker 目录 → 复制并修改 .env（端口冲突时必改）→ 执行 `docker compose up -d`。首次拉镜像可能较慢，报错可重试。
 
-**官方文档与资源：**
-
-- Dify Self-hosted（Docker Compose）：https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose
-- Dify GitHub 仓库：https://github.com/langgenius/dify
-- Docker Desktop for Windows：https://docs.docker.com/desktop/setup/install/windows-install/
+**官方文档与资源**：详见 [工具导航与参考资料索引 - 低代码与智能体平台](工具导航与参考资料索引.md#低代码与智能体平台)。
 
 ---
 
