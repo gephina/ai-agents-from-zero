@@ -95,13 +95,13 @@ uv sync
 运行非流式示例：
 
 ```bash
-uv run python examples/1-deep-agent-quickstart-search.py
+uv run examples/1-deep-agent-quickstart-search.py
 ```
 
 运行流式解析示例：
 
 ```bash
-uv run python examples/2-deep-agent-streaming-chunks.py
+uv run examples/2-deep-agent-streaming-chunks.py
 ```
 
 ### 1.3 配置环境变量
@@ -168,52 +168,6 @@ def internet_search(
 这里最关键的是 `@tool` 装饰器。它会把一个普通 Python 函数包装成 LangChain 工具，让 Agent 能够在推理过程中调用它。
 
 工具的函数签名和注释也很重要。模型会根据工具名称、参数类型和描述判断什么时候该调用这个工具、应该传什么参数。如果工具描述太含糊，模型就更容易误用。
-
-执行文件验证，成功：
-
-```text
-uv run python examples/1-deep-agent-quickstart-search.py
-
-LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version.
-开始调用网络搜索工具，核心参数为：人工智能 机器人 热门新闻,5,news,False
-
-{
-  "messages": [
-    HumanMessage(
-      content="请查询人工智能和机器人领域的热门新闻信息，并整理为一份简要报告。"
-    ),
-    AIMessage(
-      content="",
-      tool_calls=[
-        {
-          "name": "internet_search",
-          "args": {
-            "query": "人工智能 机器人 热门新闻",
-            "topic": "news",
-            "max_results": 5,
-            "include_raw_content": False
-          }
-        }
-      ]
-    ),
-    ToolMessage(
-      name="internet_search",
-      content="Tavily 返回了 5 条新闻结果，包含 url、title、score、published_date、content 等字段"
-    ),
-    AIMessage(
-      content="## 人工智能与机器人领域热门新闻简报\n\n1. Genesis AI 推出新型机器人大脑...\n2. Meta 收购 ARI...\n3. 无人驾驶出租车将重塑出行市场..."
-    )
-  ]
-}
-
-## 人工智能与机器人领域热门新闻简报
-
-1. Genesis AI 推出新型机器人“大脑”
-2. Meta 收购 Assured Robot Intelligence（ARI）
-3. 无人驾驶出租车将重塑出行市场
-4. 四月机器人行业十大新闻回顾
-5. 值得关注的欧洲初创企业
-```
 
 ### 1.5 初始化模型
 
@@ -297,6 +251,64 @@ print(result["messages"][-1].content)
 ```
 
 这是因为 DeepAgents 底层沿用了 LangGraph / LangChain 的消息模型，整个执行过程都会围绕 `messages` 传递状态。
+
+执行文件验证，成功：
+
+```text
+uv run examples/1-deep-agent-quickstart-search.py
+
+LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version.
+开始调用网络搜索工具，核心参数为：人工智能 机器人 热门新闻,5,news,False
+
+{
+  "messages": [
+    HumanMessage(
+      content="请查询人工智能和机器人领域的热门新闻信息，并整理为一份简要报告。"
+    ),
+    AIMessage(
+      content="",
+      tool_calls=[
+        {
+          "name": "internet_search",
+          "args": {
+            "query": "人工智能 机器人 热门新闻",
+            "topic": "news",
+            "max_results": 5,
+            "include_raw_content": False
+          }
+        }
+      ]
+    ),
+    ToolMessage(
+      name="internet_search",
+      content="Tavily 返回了 5 条新闻结果，包含 url、title、score、published_date、content 等字段"
+    ),
+    AIMessage(
+      content="## 人工智能与机器人领域热门新闻简报\n\n1. Genesis AI 推出新型机器人大脑...\n2. Meta 收购 ARI...\n3. 无人驾驶出租车将重塑出行市场..."
+    )
+  ]
+}
+
+## 人工智能与机器人领域热门新闻简报
+
+1. Genesis AI 推出新型机器人“大脑”
+2. Meta 收购 Assured Robot Intelligence（ARI）
+3. 无人驾驶出租车将重塑出行市场
+4. 四月机器人行业十大新闻回顾
+5. 值得关注的欧洲初创企业
+```
+
+其中，`LangChainPendingDeprecationWarning` 是 LangGraph / LangChain 依赖内部的版本提示，不影响本章示例运行。真正要观察的是后面的工具调用日志、`messages` 轨迹和最终报告。
+
+这段输出可以按三层来看：
+
+| 输出位置                         | 说明                                                   |
+| -------------------------------- | ------------------------------------------------------ |
+| `开始调用网络搜索工具...`        | 工具函数内部的 `print()`，说明 `internet_search` 被真正执行 |
+| `result["messages"]`             | 完整执行轨迹，包含用户消息、模型工具调用、工具返回和最终回答 |
+| 最后的 Markdown 报告             | `result["messages"][-1].content`，也就是最终展示给用户的内容 |
+
+这里先建立一个直觉：`invoke()` 虽然最后拿到的是一份报告，但它内部并不是“一次模型回答”，而是经历了“模型决定调工具 -> 工具返回结果 -> 模型整理答案”的完整链路。
 
 ---
 
@@ -787,11 +799,11 @@ last_msg = messages[-1]
 执行文件验证，成功：
 
 ```text
-((.venv) ) tools@ToolsMacBook-Pro deepsearch-agents % uv run examples/2-deep-agent-streaming-chunks.py
-/Users/tools/Desktop/agent/data-agent-study/deepsearch-agents/.venv/lib/python3.12/site-packages/langgraph/checkpoint/serde/encrypted.py:5: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
-  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+uv run examples/2-deep-agent-streaming-chunks.py
+
+LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version.
 【大模型】决定调用工具：internet_search 传入的参数：{'query': '人工智能和机器人 热门新闻', 'topic': 'news', 'max_results': 5}
-开始网络搜索工具调用！核心参数为：人工智能和机器人 热门新闻,5,news,False
+开始调用网络搜索工具，核心参数为：人工智能和机器人 热门新闻,5,news,False
 【agent】调用了internet_search工具，返回的结果为：{"query": "人工智能和机器人 热门新闻", "follow_up_questions": null, "answer": null, "images": [], "results": [{"....
 【大模型】最终执行的结果：以下是关于人工智能和机器人的几条热门新闻概要：
 
@@ -809,6 +821,17 @@ last_msg = messages[-1]
 
 如果您需要更多详细信息或想深入了解某个特定主题，请告诉我！
 ```
+
+这段输出比 `invoke()` 更适合观察执行过程，可以按顺序读：
+
+| 输出片段                                | 对应的执行阶段                                         |
+| --------------------------------------- | ------------------------------------------------------ |
+| `【大模型】决定调用工具...`             | `model` 节点输出，模型决定下一步调用 `internet_search` |
+| `开始调用网络搜索工具...`               | Python 工具函数真正开始执行                            |
+| `【agent】调用了internet_search工具...` | `tools` 节点输出，工具结果已经返回                     |
+| `【大模型】最终执行的结果...`           | `model` 节点再次输出，模型基于工具结果生成最终回答     |
+
+这就是流式解析最核心的价值：不用等到最终报告生成，开发者和前端都能看到 Agent 当前走到了哪一步。
 
 ### 3.6 对接前端时怎么展示
 
