@@ -223,7 +223,7 @@ MYSQL_SQL_MODE=TRADITIONAL
 
 ### 4.3 使用 Docker 启动 MySQL
 
-如果你对 Docker、Compose、端口映射或数据卷还不熟，可以先回看 [第 8 章 Docker 入门与 Dify 部署常见问题](../8-Docker入门与Dify部署常见问题.md)，再继续执行下面的启动命令。
+如果你对 Docker、Compose、端口映射或数据卷还不熟，可以先回看 [第 8 章 Docker 快速入门与 Dify 部署排障](../8-Docker快速入门与Dify部署排障.md)，再继续执行下面的启动命令。
 
 项目里已经准备了 Docker Compose 文件：`deepsearch-agents/docker/docker-compose.yaml`
 
